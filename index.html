@@ -29,10 +29,14 @@
             background-color: rgba(255,255,255,0.8);
             background-size: cover;
         }
+        #item1 {
+            background-image: url('nemesis machine.webp');
+        }
 
     </style>
 </head>
 <body>
+    <button class="start" type="button" onclick='randomLocation("item");'>MOVE</button>
     <div class = "container">
         <div class = "item">
             IDEA
@@ -43,7 +47,7 @@
         <div class = "item">
             code to explore
         </div>
-        <div class = "item" style = "background-image: url('nemesis machine.webp')">
+        <div class = "item" id = "item1">
             inspiration
         </div>
         <div class = "item">
@@ -57,7 +61,7 @@
 
     <script>
         // RANDOMISE POSITIONS OF THE 'item' CLASS
-        randomLocation("item");
+        // randomLocation("item");
         
         // ADD A RANDOM POSITION TO A CLASS OF TAGS
         function randomLocation(myclass){
