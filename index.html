@@ -1,0 +1,90 @@
+<head>
+    <style>
+        body, html {
+	        height: 100%;
+            color: #000000cd;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 0.9em;
+        }
+        html{
+            height: 100%;
+            background-image:url("circuit board.jpeg");
+            background-position: center;
+            background-repeat: repeat;
+            background-size: cover;
+        }
+        div{
+            border: 1px solid red;
+        }
+        /* GRID OF 'FLEXBOX' BOXES */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .item {
+            width: 32%;
+            padding-bottom: 18%; /* 32:18, i.e. 16:9 */
+            margin-bottom: 2%; /* (100-32*3)/2 */
+            background-color: rgba(255,255,255,0.8);
+            background-size: cover;
+        }
+
+    </style>
+</head>
+<body>
+    <div class = "container">
+        <div class = "item">
+            IDEA
+        </div>
+        <div class = "item">
+            themes
+        </div>
+        <div class = "item">
+            code to explore
+        </div>
+        <div class = "item" style = "background-image: url('nemesis machine.webp')">
+            inspiration
+        </div>
+        <div class = "item">
+            
+        </div>
+        <div class = "item">
+            
+        </div>
+        
+    </div>
+
+    <script>
+        // RANDOMISE POSITIONS OF THE 'item' CLASS
+        randomLocation("item");
+        
+        // ADD A RANDOM POSITION TO A CLASS OF TAGS
+        function randomLocation(myclass){
+            const items = document.getElementsByClassName(myclass);
+            for (let i = 0; i < items.length; i++) {
+            let style = randomPosition(); 
+            items.item(i).setAttribute("style", style);
+            }
+        }
+                
+        // GENERATE A RANDOM POSITION STYLE FOR THE ELEMENT
+        function randomPosition(){
+            let top = rand(100);                    
+            let bottom = rand(100);                 
+            let deg = rand(360);                    
+            let style = "";
+            style += "transform:rotate("+deg+"deg);";
+            style += "position:absolute;";
+            style += "top:"+top+"%;";
+            style += "left:"+bottom+"%;";
+            return style;
+        }
+    
+        // GENERATE A RANDOM NUMBER
+        function rand(i){
+            return Math.floor(Math.random()*i); 
+        }
+    </script>
+</body>
+</html>
