@@ -36,7 +36,7 @@
     </style>
 </head>
 <body>
-    <button class="start" type="button" onclick='randomLocation("item");'>MOVE</button>
+    <button class = "start" type = "button" onclick = 'setTimeout(trigger, 1000);'> timer </button>
     <div class = "container">
         <div class = "item">
             IDEA
@@ -50,18 +50,25 @@
         <div class = "item" id = "item1">
             inspiration
         </div>
-        <div class = "item">
-            
+        <div class = "item" onclick = 'randomLocation("item");'> 
+            randomise? 
         </div>
         <div class = "item">
             
         </div>
-        
     </div>
 
     <script>
         // RANDOMISE POSITIONS OF THE 'item' CLASS
         // randomLocation("item");
+        
+        //add a timer fo rwhen it will move
+        // setTimeout(trigger, 1000)
+        function trigger(){
+            randomLocation("item");
+            setTimeout(trigger, 1000)
+
+        }
         
         // ADD A RANDOM POSITION TO A CLASS OF TAGS
         function randomLocation(myclass){
