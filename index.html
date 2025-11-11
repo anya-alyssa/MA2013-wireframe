@@ -14,7 +14,7 @@
             background-size: cover;
         }
         div{
-            border: 1px solid red;
+            border: 1px solid darkblue;
         }
         /* GRID OF 'FLEXBOX' BOXES */
         .container {
@@ -24,14 +24,18 @@
         }
         .item {
             width: 32%;
-            padding-bottom: 18%; /* 32:18, i.e. 16:9 */
-            margin-bottom: 2%; /* (100-32*3)/2 */
+            padding-bottom: 2%; /* 32:18, i.e. 16:9 */
+            margin-bottom: 5%; /* (100-32*3)/2 */
             background-color: rgba(255,255,255,0.8);
             background-size: cover;
         }
-        #item1 {
-            background-image: url('nemesis machine.webp');
+        .container img {
+            width: 100%;
         }
+
+        /*#item1 {
+           background-image: url('nemesis machine.webp');
+        }*/
 
     </style>
 </head>
@@ -40,21 +44,50 @@
     <div class = "container">
         <div class = "item">
             IDEA
+            <br>
+            <br>
+            I have 3 main ideas:
+            <br>
+            <br>
+            - a digital scrapbook
+            <br>
+            <br>
+            - making things out of broken electronics (city/"feminine" items)
+            <br>
+            <br>
+            - "a lost phone" style interactive piece
         </div>
         <div class = "item">
-            themes
+            THEMES
+            <br>
+            <br>
+            - lost memories
+            <br>
+            <br>
+            - between femininity and masculinity
         </div>
         <div class = "item">
-            code to explore
+            CODE TO EXPLORE:
+            <br>
+            <br>
+            - facial recognition for digital scrapbook (https://w3collective.com/face-detection-javascript/)
+            <br>
+            <br>
+
         </div>
-        <div class = "item" id = "item1">
-            inspiration
+        <div class = "item">
+            INSPIRATION
+            <br>
+            <img src="anormallostphone.jpg">
+            <img src="nemesis machine.webp">
+        </div>
+        <div class = "item">
+            <br>
+            <img src="scrapbook.avif">
+            <img src="electronicheel.png">
         </div>
         <div class = "item" onclick = 'randomLocation("item");'> 
             randomise? 
-        </div>
-        <div class = "item">
-            
         </div>
     </div>
 
